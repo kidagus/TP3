@@ -1,0 +1,17 @@
+SIN HILOS
+respecto al tiempo de ejecucion se puede notar que es muy predecible, pero pueden haber ligeras variaciones en el tiempo de ejecucion
+1 proceso: compresion de datos
+2 Una solicitud HTTP a una web de un servidor
+CON HILOS
+Sí, se puede notar una mejora significativa en el tiempo de ejecución cuando se utilizan hilos. Sin el uso de hilos, las tareas se ejecutan secuencialmente, una después de la 
+otra. Con hilos, las tareas pueden ejecutarse concurrentemente, aprovechando mejor los recursos del sistema y puede terminar una primera que otra sin seguir el orden 
+establecido, dependiendo de varios factores como la duracion de cada tarea.
+Un escenario real donde el multi-hilado puede mejorar considerablemente el tiempo de respuesta de un sistema es en la descarga y procesamiento de datos en aplicaciones 
+móviles. Ejemplo: aplicaciones móviles que sincronizan datos
+CON RACE
+el tiempo de ejecucion aumenta, los valores finales varian porque dos dos partes del programa intentan cambiar el valor del acumulador al mismo tiempo y a veces una parte 
+puede modificarlo antes que la otra , lo que hace que el resultado final varie
+para corregir la condicion de carrera sin dejar de usar hilos se puede usar un algoritmo de semafaro o de lock
+SIN RACE
+El valor final del acumulador siempre es 0, el tiempo de ejecucion es consistente, aunque ligeramente un poquito mas alto debido al uso del candado
+
